@@ -1,6 +1,6 @@
 import Parser from './Parser';
 
-describe('Parser stas', () => {
+describe('Parser checkIfInputIsStandardized', () => {
   test('should pass standardized move for pawn', () => {
     const parser = Parser.getInstance();
     expect(parser.checkIfInputIsStandardized("a1")).toBe(true);
