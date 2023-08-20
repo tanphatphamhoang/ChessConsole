@@ -21,12 +21,13 @@ class Parser{
   }
 
   public checkIfInputIsStandardized(move: string): boolean{
-    if(move.length < 2){
+    if(move.length != 4){
       return false;
     }
-    const regexPawnMove = new RegExp("^[a-h][1-8]$");
-    const regexOthersMove = new RegExp("^[KQRBN][a-h][a-h][1-8]$");
-    return regexPawnMove.test(move) || regexOthersMove.test(move);
+
+    const isStandardized = new RegExp("^[a-h][1-8][a-h][1-8]$").test(move);
+    const isDifferentSquare = move[0] != move[2] || move[1] != move[3];
+    return isStandardized && isDifferentSquare;
   }
 }
 
