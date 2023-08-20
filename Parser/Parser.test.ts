@@ -1,12 +1,12 @@
 import Parser from './Parser';
 
-describe('Parser', () => {
-  test('should be a standardized move for pawn', () => {
+describe('Parser stas', () => {
+  test('should pass standardized move for pawn', () => {
     const parser = Parser.getInstance();
     expect(parser.checkIfInputIsStandardized("a1")).toBe(true);
   });
 
-  test('should be a standardized move for KQBNR', () => {
+  test('should pass standardized moves for KQBNR', () => {
     const parser = Parser.getInstance();
     expect(parser.checkIfInputIsStandardized("Kbb1")).toBe(true);
     expect(parser.checkIfInputIsStandardized("Qbb1")).toBe(true);
@@ -15,7 +15,7 @@ describe('Parser', () => {
     expect(parser.checkIfInputIsStandardized("Rbb1")).toBe(true);
   });
 
-  test('should not be a standardized move', () => {
+  test('should not pass non-standardized moves', () => {
     const parser = Parser.getInstance();
     expect(parser.checkIfInputIsStandardized("")).toBe(false);
     expect(parser.checkIfInputIsStandardized("a")).toBe(false);
