@@ -1,6 +1,6 @@
 class Board{
     board: Array<Array<Square>>;
-    N = 8;
+    readonly N = 8;
 
     constructor(){
       this.board = this.initializeBoard();

@@ -1,5 +1,5 @@
 class Square{
-  position: Position;
+  readonly position: Position;
   piece: Piece | null = null;
 
   public constructor(position: Position, piece: Piece | null = null){
