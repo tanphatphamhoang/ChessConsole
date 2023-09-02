@@ -2,13 +2,13 @@ import Color from "./Color";
 import Piece from "./Piece";
 
 export default class DummyPiece implements Piece {
-  color: Color;
+  Color: Color;
 
   constructor(color: Color){
-    this.color = color;
+    this.Color = color;
   }
 
   public getColor(): Color {
-    return this.color;
+    return this.Color;
   }
 }
