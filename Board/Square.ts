@@ -22,7 +22,7 @@ export default class Square {
     return this.piece;
   }
 
-  public setPiece(piece: Piece): void {
+  public setPiece(piece: Piece | null): void {
     this.piece = piece;
   }
 

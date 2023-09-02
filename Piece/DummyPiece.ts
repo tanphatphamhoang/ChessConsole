@@ -7,4 +7,8 @@ export default class DummyPiece implements Piece {
   constructor(color: Color){
     this.color = color;
   }
+
+  public getColor(): Color {
+    return this.color;
+  }
 }
