@@ -1,13 +1,10 @@
 enum PieceType {
-    Rook= "rook",
-    Knight = "knight",
-    Bishop = "bishop",
-    Queen = "queen",
-    King = "king",
-    Pawn = "pawn"
+    ROOK = "rook",
+    KNIGHT = "knight",
+    BISHOP = "bishop",
+    QUEEN = "queen",
+    KING = "king",
+    PAWN = "pawn"
 }
 
-enum Color {
-    White= "white",
-    Black= "Black"
-}
+export default PieceType;
