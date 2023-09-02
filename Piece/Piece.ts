@@ -1,4 +1,4 @@
-interface Piece {
+export default interface Piece {
     PieceType: PieceType;
     hasMoved: Boolean;
     Color: Color;
