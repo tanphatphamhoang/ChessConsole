@@ -1,12 +1,13 @@
-import PieceType from "./PieceType";
 import Color from "./Color";
-import Position from "../Board/Position";
+// import PieceType from "./PieceType";
+// import Position from "../Board/Position";
 
 export default interface Piece {
-    PieceType: PieceType;
-    hasMoved: Boolean;
-    Color: Color;
-    increaments: Array<Array<Number>>;
-    abstract public getThreatenedPositions(piecetype: PieceType, position: Position): Array<Position>;
-    abstract public getMovablePositions(piecetype: PieceType, position: Position): Array<Position>;
+	Color: Color;
+	getColor(): Color;
+	// hasMoved: Boolean;
+	// PieceType: PieceType;
+	// increaments: Array<Array<Number>>;
+	// getThreatenedPositions(piecetype: PieceType, position: Position): Array<Position>;
+	// getMovablePositions(piecetype: PieceType, position: Position): Array<Position>;
 }
