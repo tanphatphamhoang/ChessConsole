@@ -1,13 +1,14 @@
 import PieceType from "./PieceType";
 import Color from "./Color";
+import Position from "../Board/Position";
 
 export default abstract class Piece {
   private pieceType: PieceType;
   private hasMoved: boolean;
   private color: Color;
   private increments: Array<Array<Number>>;
-  // abstract public getThreatenedPositions(piecetype: PieceType, position: Position): Array<Position>;
-	// abstract public getMovablePositions(piecetype: PieceType, position: Position): Array<Position>;
+  public abstract getThreatenedPositions(position: Position, increments: Array<Array<Number>>, color: Color): Array<Position> ;
+	public abstract getMovablePositions(position: Position, increments: Array<Array<Number>>, color: Color): Array<Position> ;
     
   constructor(
     pieceType: PieceType,
