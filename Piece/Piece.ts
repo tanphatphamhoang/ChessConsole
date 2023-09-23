@@ -12,7 +12,7 @@ export default abstract class Piece {
       this._color = _color;
   }
 
-	get hasMoved(): Boolean {
+  get hasMoved(): Boolean {
     return this._hasMoved;
   }
 
