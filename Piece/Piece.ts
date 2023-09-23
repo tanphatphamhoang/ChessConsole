@@ -7,8 +7,7 @@ export default abstract class Piece {
   public abstract getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position> ;
 	public abstract getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position> ;
     
-  constructor(
-    _color: Color,){
+  constructor(_color: Color,){
       this._color = _color;
   }
 
