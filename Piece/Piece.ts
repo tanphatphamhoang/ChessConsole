@@ -39,3 +39,63 @@ export default abstract class Piece {
     this._hasMoved = hasMove;
   }
 }
+
+export class King extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
+
+export class Queen extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
+
+export class Bishop extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
+
+export class Knight extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
+
+export class Rook extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
+
+export class Pawn extends Piece {
+  getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+  
+  getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position>{
+      return [];
+  }
+}
