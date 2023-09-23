@@ -3,11 +3,12 @@ import Color from "../Piece/Color";
 import DummyPiece from "../Piece/DummyPiece";
 import Position from "./Position";
 import Square from "./Square";
+import PieceType from "../Piece/PieceType";
 
 describe("executeMove", () => {
   it("should move a piece from a square to another empty square", () => {
     // Arrange
-    let piece = new DummyPiece(Color.WHITE);
+    let piece = new DummyPiece(PieceType.KING,Color.WHITE,[[]]);
     let from = new Square(new Position(0, 0), piece);
     let to = new Square(new Position(1, 1));
     let board = new Board();
@@ -24,8 +25,8 @@ describe("executeMove", () => {
 
   it("should move a piece from a square to another square with a piece of the opposite color", () => {
     // Arrange
-    let pieceAtFrom = new DummyPiece(Color.WHITE);
-    let pieceAtTo = new DummyPiece(Color.BLACK);
+    let pieceAtFrom = new DummyPiece(PieceType.KING,Color.WHITE,[[]]);
+    let pieceAtTo = new DummyPiece(PieceType.KING,Color.BLACK,[[]]);
 
     let from = new Square(new Position(0, 0), pieceAtFrom);
     let to = new Square(new Position(1, 1), pieceAtTo);
