@@ -3,8 +3,8 @@ enum PieceType {
   KNIGHT = "knight",
   BISHOP = "bishop",
   QUEEN = "queen",
-	KING = "king",
+  KING = "king",
   PAWN = "pawn"
-}				
+}
 
 export default PieceType;
