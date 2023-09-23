@@ -23,7 +23,7 @@ export default abstract class Piece {
     return this._pieceType;
   }
 
-	get hasMoved(): Boolean {
+  get hasMoved(): Boolean {
     return this._hasMoved;
   }
 
