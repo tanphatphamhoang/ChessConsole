@@ -9,11 +9,11 @@ describe("Piece", () => {
   let pieceRookWhite = new DummyPiece(PieceType.ROOK, Color.WHITE, [[]]);
 
   it("should return the correct piece type", () => {
-    expect(pieceRookWhite.getPieceType).toBe("rook");
+    expect(pieceRookWhite.pieceType).toBe("rook");
   });
 
   it("should return the correct intial hasMoved status", () => {
-    expect(pieceRookWhite.getHasMoved).toBe(false);
+    expect(pieceRookWhite.hasMoved).toBe(false);
   });
 
   it("should return the correct hasMoved status after the first move", () => {
@@ -24,15 +24,15 @@ describe("Piece", () => {
     board.board[1][1] = to;
     board.executeMove(from, to);
 
-    expect(pieceRookWhite.getHasMoved).toBe(true);
+    expect(pieceRookWhite.hasMoved).toBe(true);
   });
 
   it("should return the correct color", () => {
-    expect(pieceRookWhite.getColor).toBe("white");
+    expect(pieceRookWhite.color).toBe("white");
   });
 
   it("should return the correct increments set", () => {
-    expect(JSON.stringify(pieceRookWhite.getIncrements)).toBe(
+    expect(JSON.stringify(pieceRookWhite.increments)).toBe(
       JSON.stringify([[]])
     );
   });

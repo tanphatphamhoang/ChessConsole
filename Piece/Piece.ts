@@ -3,41 +3,39 @@ import Color from "./Color";
 import Position from "../Board/Position";
 
 export default abstract class Piece {
-  private pieceType: PieceType;
-  private hasMoved: boolean;
-  private color: Color;
-  private increments: Array<Array<Number>>;
-  public abstract getThreatenedPositions(position: Position, increments: Array<Array<Number>>, color: Color): Array<Position> ;
-	public abstract getMovablePositions(position: Position, increments: Array<Array<Number>>, color: Color): Array<Position> ;
+  private _pieceType: PieceType;
+  private _hasMoved: boolean = false;
+  private _color: Color;
+  private _increments: Array<Array<number>>;
+  public abstract getThreatenedPositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position> ;
+	public abstract getMovablePositions(position: Position, increments: Array<Array<number>>, color: Color): Array<Position> ;
     
   constructor(
-    pieceType: PieceType,
-    color: Color,
-    increments: Array<Array<Number>>){
-      this.pieceType = pieceType;
-      this.hasMoved = false;
-      this.color = color;
-      this.increments = increments
+    _pieceType: PieceType,
+    _color: Color,
+    _increments: Array<Array<number>>){
+      this._pieceType = _pieceType;
+      this._color = _color;
+      this._increments = _increments
   }
 
-  get getPieceType(): PieceType {
-    return this.pieceType;
+  get pieceType(): PieceType {
+    return this._pieceType;
   }
 
-	get getHasMoved(): Boolean {
-    return this.hasMoved;
+	get hasMoved(): Boolean {
+    return this._hasMoved;
   }
 
-  get getColor(): Color {
-    return this.color;
+  get color(): Color {
+    return this._color;
   }
 
-  get getIncrements(): Array<Array<Number>> {
-    return this.increments;
+  get increments(): Array<Array<number>> {
+    return this._increments;
   }
 
-  setHasMoved() {
-    this.hasMoved = true;
+  public set hasMoved(hasMove : boolean) {
+    this._hasMoved = hasMove;
   }
-
 }

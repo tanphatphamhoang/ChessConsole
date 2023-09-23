@@ -34,10 +34,10 @@ export default class Board {
 
       to.setPiece(pieceAtFrom);
       from.setPiece(null);
-      pieceAtFrom.setHasMoved();
+      pieceAtFrom.hasMoved = true;
 
       if(pieceAtTo != null) {
-        if(pieceAtTo.getColor === Color.WHITE) {
+        if(pieceAtTo.color === Color.WHITE) {
           this.whitePieces.delete(pieceAtTo);
         } else {
           this.blackPieces.delete(pieceAtTo);
