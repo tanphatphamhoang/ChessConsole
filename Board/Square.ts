@@ -2,28 +2,28 @@ import Piece from "../Piece/Piece";
 import Position from "./Position";
 
 export default class Square {
-  readonly position: Position;
-  piece: Piece | null = null;
+  private readonly _position: Position;
+  private _piece: Piece | null = null;
 
   public constructor(position: Position, piece: Piece | null = null) {
-    this.position = position;
-    this.piece = piece;
+    this._position = position;
+    this._piece = piece;
   }
 
   public isEmpty(): boolean {
-    return this.piece == null;
+    return this._piece == null;
   }
 
-  public getPosition(): Position {
-    return this.position;
+  get position(): Position {
+    return this._position;
   }
 
-  public getPiece(): Piece | null {
-    return this.piece;
+  get piece(): Piece | null {
+    return this._piece;
   }
 
-  public setPiece(piece: Piece | null): void {
-    this.piece = piece;
+  set piece(piece: Piece | null) {
+    this._piece = piece;
   }
 
   // tbd: toString();
